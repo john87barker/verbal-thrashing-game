@@ -1,9 +1,12 @@
-let health = 100
+let life = 100
 
 function slap() {
-  console.log('you got slapped')
 
+  life -= 1
 
+  console.log(life)
+
+  document.getElementById('health').innerText = life
 
 }
 function losingHealth() {
