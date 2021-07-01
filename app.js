@@ -5,9 +5,7 @@ let hits = 0
 
 function hit() {
   hits += 1
-
 }
-
 
 function silly() {
   life -= 1
