@@ -16,12 +16,24 @@
 </head>
 
 <body>
-  <header class="container-fluid">Header of Hate</header>
+  <header class="container-fluid ">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-around">
+        <span>Hits:<span id="hits">--</span></span>
+
+        <span>
+          <h1> Verbal Thrashing</h1>
+        </span>
+
+        <span>Health:<span id="health">--</span></span>
+      </div>
+    </div>
+  </header>
 
   <main class="container">
     <div class="row-12">
-      <div class="col-md-12 ">
-        <span>Health:<span id="health">--</span></span>
+      <div class="col-md-12 d-flex justify-content-center">
+
 
         <img src="yell1.jpg" class="w-75" alt="TARGET">
       </div>
@@ -32,7 +44,21 @@
 
     <div class="row">
       <div class="col-md-6">Defense</div>
-      <div class="col-md-6">Beating</div>
+
+
+      <div class="col-md-6">
+        <div>
+          <h3>Beating</h3>
+        </div>
+        <div class="p-1"><button type="button" class="btn btn-warning" onclick="silly()">Call you 'silly'</button>
+        </div>
+        <div class="p-1"><button type="button" class="btn btn-warning" onclick="honor()">Insult your honor.</button>
+        </div>
+        <div class="p-1"><button type="button" class="btn btn-warning" onclick="momma()">Insult your momma!!</button>
+        </div>
+
+
+      </div>
     </div>
 
 
@@ -43,7 +69,7 @@
   <footer class="container-fluid">
     <div class="row-12"></div>
     <h1 class="col-md-12">
-      <button type="button" class="btn btn-primary" onclick="slap()">You might die by this SLAP</button>
+
     </h1>
   </footer>
 
