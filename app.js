@@ -1,14 +1,19 @@
-let villains = {
-  A: {
-    name: 'Alfred',
-    life = 100,
-    hits = 0
-  },
-  B: {
-    name: 'Boris',
-    life = 100,
-    hits = 0
-  }
+// let villains = {
+//   //A: {
+//     name: 'Alfred',
+//     life: 100,
+//     hits: 0
+//   },
+// B: {
+//   name: 'Boris',
+//   life: 100,
+//   hits: 0
+// }
+//}
+let villain = {
+  name: 'Alfred',
+  life: 100,
+  hits: 0
 }
 let insults = {
   silly: {
@@ -26,9 +31,20 @@ let insults = {
 }
 
 function hit() {
-  hits += 1
+  villain.hits += 1
+}
+function cry() {
+  if (villain.life <= 0) {
+    window.alert(`You have made ${villain.name} cry! \n You are now a bad person! 😭`)
+  }
 }
 
+function insult(banana) {
+  villain.life += insults[banana].hp
+  hit()
+  update()
+
+}
 // function silly() {
 //   life -= 1
 //   hit()
@@ -47,9 +63,11 @@ function hit() {
 // }
 
 function update() {
-  document.getElementById('health').innerText = life
-  document.getElementById('hits').innerText = hits
 
+  document.getElementById('vName').innerText = villain.name
+  document.getElementById('health').innerText = villain.life
+  document.getElementById('hits').innerText = villain.hits
+  cry()
 }
 
 
