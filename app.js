@@ -71,15 +71,6 @@ let defense = {
   },
 
 }
-//adding defense to shield
-function giveHelp(itemName) {
-  console.log(itemName)
-  let dItem = villain.shield
-  defense[itemName].modifier += dItem
-  console.log(dItem)
-  update()
-}
-
 
 function insult(banana) {
   shield()
@@ -87,14 +78,28 @@ function insult(banana) {
   villain.life += insults[banana].hp
   hit()
   update()
-
 }
-function shield() {
+
+//adding defense to shield
+function giveHelp(itemName) {
+  // console.log(itemName)
+  let dItem = villain.shield
+  defense[itemName].modifier += dItem
+  shield(itemName)
+  // console.log(dItem)
+  update()
+}
+
+function shield(itemName) {
   if (villain.shield >= 0) {
-    villain.shield = + insults[banana]
+    console.log('[shield]', itemName)
+    // villain.shield = + insults[banana]
   }
   villain.shield += 1
 }
+
+
+
 
 function hit() {
   villain.hits += 1
